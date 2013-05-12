@@ -9,6 +9,16 @@
 #import "HZCountryToContinentDecoder.h"
 
 
+#pragma mark - Constants
+
+NSString * const kContinentNameAfrica       = @"Africa";
+NSString * const kContinentNameAmerica      = @"America";
+NSString * const kContinentNameAsia         = @"Asia";
+NSString * const kContinentNameAustralia    = @"Australia";
+NSString * const kContinentNameEurope       = @"Europe";
+
+#pragma mark -
+
 @implementation HZCountryToContinentDecoder
 
 
@@ -25,9 +35,14 @@
 
 +(NSArray *)allContinents
 {
-    #warning Class method not implemented
+    static NSArray *result = nil;
     
-    return nil;
+    if (!result)
+    {
+        result = @[kContinentNameAfrica, kContinentNameAmerica, kContinentNameAsia, kContinentNameAustralia, kContinentNameEurope];
+    }
+    
+    return result;
 }
 
 
