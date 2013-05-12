@@ -13,5 +13,5 @@
 @interface TranscontinentalExampleTests : SenTestCase
 
 @property (nonatomic, strong) CLGeocoder *geocoder;
-
+@property (nonatomic, unsafe_unretained, getter = isAsynOperationFinished) BOOL asynOperationFinished;
 @end
