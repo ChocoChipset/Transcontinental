@@ -25,6 +25,10 @@
 		3A057FA1173FCE10007274A5 /* TranscontinentalExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A057FA0173FCE10007274A5 /* TranscontinentalExampleTests.m */; };
 		3A057FAB173FCEF9007274A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A057FAA173FCEF9007274A5 /* CoreLocation.framework */; };
 		3A057FB9173FD79A007274A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A057FAA173FCEF9007274A5 /* CoreLocation.framework */; };
+		3A057FBC173FE580007274A5 /* HZCountryToContinentDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A057FBB173FE580007274A5 /* HZCountryToContinentDecoder.m */; };
+		3A057FBD173FE580007274A5 /* HZCountryToContinentDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A057FBB173FE580007274A5 /* HZCountryToContinentDecoder.m */; };
+		3A3AE0E217401C4300CADC35 /* CLPlacemark+HZContinents.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A057FB6173FD068007274A5 /* CLPlacemark+HZContinents.m */; };
+		3A3AE0E317401C4F00CADC35 /* CLPlacemark+HZContinents.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A057FB6173FD068007274A5 /* CLPlacemark+HZContinents.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,8 @@
 		3A057FAA173FCEF9007274A5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3A057FB5173FD068007274A5 /* CLPlacemark+HZContinents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLPlacemark+HZContinents.h"; sourceTree = "<group>"; };
 		3A057FB6173FD068007274A5 /* CLPlacemark+HZContinents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLPlacemark+HZContinents.m"; sourceTree = "<group>"; };
+		3A057FBA173FE580007274A5 /* HZCountryToContinentDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZCountryToContinentDecoder.h; sourceTree = "<group>"; };
+		3A057FBB173FE580007274A5 /* HZCountryToContinentDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCountryToContinentDecoder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +180,8 @@
 			children = (
 				3A057FB5173FD068007274A5 /* CLPlacemark+HZContinents.h */,
 				3A057FB6173FD068007274A5 /* CLPlacemark+HZContinents.m */,
+				3A057FBA173FE580007274A5 /* HZCountryToContinentDecoder.h */,
+				3A057FBB173FE580007274A5 /* HZCountryToContinentDecoder.m */,
 			);
 			name = Source;
 			path = ../../Source;
@@ -290,10 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A3AE0E217401C4300CADC35 /* CLPlacemark+HZContinents.m in Sources */,
 				3A057F7C173FCE10007274A5 /* main.m in Sources */,
 				3A057F80173FCE10007274A5 /* HZAppDelegate.m in Sources */,
 				3A057F8C173FCE10007274A5 /* HZViewController.m in Sources */,
-				3A057FB7173FD068007274A5 /* CLPlacemark+HZContinents.m in Sources */,
+				3A057FBC173FE580007274A5 /* HZCountryToContinentDecoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,8 +310,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A3AE0E317401C4F00CADC35 /* CLPlacemark+HZContinents.m in Sources */,
 				3A057FA1173FCE10007274A5 /* TranscontinentalExampleTests.m in Sources */,
-				3A057FB8173FD068007274A5 /* CLPlacemark+HZContinents.m in Sources */,
+				3A057FBD173FE580007274A5 /* HZCountryToContinentDecoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +487,7 @@
 				3A057FA6173FCE10007274A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A057FA7173FCE10007274A5 /* Build configuration list for PBXNativeTarget "TranscontinentalExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +496,7 @@
 				3A057FA9173FCE10007274A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
