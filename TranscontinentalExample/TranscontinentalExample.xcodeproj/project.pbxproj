@@ -27,8 +27,8 @@
 		3A057FB9173FD79A007274A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A057FAA173FCEF9007274A5 /* CoreLocation.framework */; };
 		3A057FBC173FE580007274A5 /* HZCountryToContinentDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A057FBB173FE580007274A5 /* HZCountryToContinentDecoder.m */; };
 		3A057FBD173FE580007274A5 /* HZCountryToContinentDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A057FBB173FE580007274A5 /* HZCountryToContinentDecoder.m */; };
-		3A3AE0E217401C4300CADC35 /* CLPlacemark+HZContinents.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A057FB6173FD068007274A5 /* CLPlacemark+HZContinents.m */; };
-		3A3AE0E317401C4F00CADC35 /* CLPlacemark+HZContinents.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A057FB6173FD068007274A5 /* CLPlacemark+HZContinents.m */; };
+		3A3AE0E6174022B400CADC35 /* CLPlacemark+HZContinents.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A057FB6173FD068007274A5 /* CLPlacemark+HZContinents.m */; };
+		3A3AE0E7174022B400CADC35 /* CLPlacemark+HZContinents.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A057FB6173FD068007274A5 /* CLPlacemark+HZContinents.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -298,11 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A3AE0E217401C4300CADC35 /* CLPlacemark+HZContinents.m in Sources */,
 				3A057F7C173FCE10007274A5 /* main.m in Sources */,
 				3A057F80173FCE10007274A5 /* HZAppDelegate.m in Sources */,
 				3A057F8C173FCE10007274A5 /* HZViewController.m in Sources */,
 				3A057FBC173FE580007274A5 /* HZCountryToContinentDecoder.m in Sources */,
+				3A3AE0E6174022B400CADC35 /* CLPlacemark+HZContinents.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,9 +310,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A3AE0E317401C4F00CADC35 /* CLPlacemark+HZContinents.m in Sources */,
 				3A057FA1173FCE10007274A5 /* TranscontinentalExampleTests.m in Sources */,
 				3A057FBD173FE580007274A5 /* HZCountryToContinentDecoder.m in Sources */,
+				3A3AE0E7174022B400CADC35 /* CLPlacemark+HZContinents.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
