@@ -8,6 +8,10 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
+@class CLGeocoder;
+
 @interface TranscontinentalExampleTests : SenTestCase
+
+@property (nonatomic, strong) CLGeocoder *geocoder;
 
 @end
