@@ -29,11 +29,34 @@ NSString * const kContinentNameEurope   = @"Europe";
         return nil;
     }
     
-    NSArray * const countriesInAfrica   = @[@"BF", @"BI", @"BJ", @"BW", @"CD", @"CF", @"CG", @"CI", @"CM", @"CV", @"DJ", @"DZ", @"EG", @"EH", @"ER", @"ET", @"GA", @"GH", @"GM", @"GN", @"GQ", @"GW", @"KE", @"KM", @"LR", @"LS", @"LY", @"MA", @"MG", @"ML", @"MR", @"MU", @"MW", @"MZ", @"NA", @"NE", @"NG", @"RE", @"RW", @"SC", @"SD", @"SH", @"SL", @"SN", @"SO", @"ST", @"SZ", @"TD", @"TG", @"TN", @"TZ", @"UG", @"YT", @"ZA", @"ZM", @"ZW" ];
-    NSArray *const countriesInAmerica   = @[ @"AG", @"AI", @"AN", @"AR", @"AW", @"BB", @"BL", @"BM", @"BO", @"BR", @"BS", @"BZ", @"CA", @"CL", @"CO", @"CR", @"CU", @"DM", @"DO", @"EC", @"FK", @"GD", @"GF", @"GL", @"GP", @"GT", @"GY", @"HN", @"HT", @"JM", @"KN", @"KY", @"LC", @"M    F", @"MQ", @"MS", @"MX", @"NI", @"PA", @"PE", @"PM", @"PR", @"PY", @"SR", @"SV", @"TC", @"TT", @"US", @"UY", @"VC", @"VE", @"VG", @"VI" ];
-    NSArray *const countriesInAsia      = @[@"AE", @"AF", @"AM", @"AP", @"AZ", @"BD", @"BH", @"BN", @"BT", @"CC", @"CN", @"CX", @"CY", @"GE", @"HK", @"ID", @"IL", @"IN", @"IO", @"IQ", @"IR", @"JO", @"JP", @"KG", @"KH", @"KP", @"KR", @"KW", @"KZ", @"LA", @"LB", @"LK", @"MM", @"M    N", @"MO", @"MV", @"MY", @"NP", @"OM", @"PH", @"PK", @"PS", @"QA", @"SA", @"SG", @"SY", @"TH", @"TJ", @"TL", @"TM", @"TW", @"UZ", @"VN", @"YE" ];
-    NSArray *const countriesInAustralia = @[@"AS", @"AU", @"CK", @"FJ", @"FM", @"GU", @"KI", @"MH", @"MP", @"NC", @"NF", @"NR", @"NU", @"NZ", @"PF", @"PG", @"PN", @"PW", @"SB", @"TK", @"TO", @"TV", @"UM", @"VU", @"WF", @"WS" ];
-    NSArray *const countriesInEurope    = @[@"AD", @"AL", @"AT", @"AX", @"BA", @"BE", @"BG", @"BY", @"CH", @"CZ", @"DE", @"DK", @"EE", @"ES", @"EU", @"FI", @"FO", @"FR", @"FX", @"GB", @"GG", @"GI", @"GR", @"HR", @"HU", @"IE", @"IM", @"IS", @"IT", @"JE", @"LI", @"LT", @"LU", @"LV", @"MC", @"MD", @"ME", @"MK", @"MT", @"NL", @"NO", @"PL", @"PT", @"RO", @"RS", @"RU", @"SE", @"SI", @"SJ", @"SK", @"SM", @"TR", @"UA", @"VA" ];
+    NSArray * const countriesInAfrica   = @[ @"BF", @"BI", @"BJ", @"BW", @"CD", @"CF", @"CG", @"CI", @"CM",
+                                             @"CV", @"DJ", @"DZ", @"EG", @"EH", @"ER", @"ET", @"GA", @"GH",
+                                             @"GM", @"GN", @"GQ", @"GW", @"KE", @"KM", @"LR", @"LS", @"LY",
+                                             @"MA", @"MG", @"ML", @"MR", @"MU", @"MW", @"MZ", @"NA", @"NE",
+                                             @"NG", @"RE", @"RW", @"SC", @"SD", @"SH", @"SL", @"SN", @"SO",
+                                             @"ST", @"SZ", @"TD", @"TG", @"TN", @"TZ", @"UG", @"YT", @"ZA",
+                                             @"ZM", @"ZW" ];
+    NSArray *const countriesInAmerica   = @[ @"AG", @"AI", @"AN", @"AR", @"AW", @"BB", @"BL", @"BM", @"BO",
+                                             @"BR", @"BS", @"BZ", @"CA", @"CL", @"CO", @"CR", @"CU", @"DM",
+                                             @"DO", @"EC", @"FK", @"GD", @"GF", @"GL", @"GP", @"GT", @"GY",
+                                             @"HN", @"HT", @"JM", @"KN", @"KY", @"LC", @"MF", @"MQ", @"MS",
+                                             @"MX", @"NI", @"PA", @"PE", @"PM", @"PR", @"PY", @"SR", @"SV",
+                                             @"TC", @"TT", @"US", @"UY", @"VC", @"VE", @"VG", @"VI" ];
+    NSArray *const countriesInAsia      = @[ @"AE", @"AF", @"AM", @"AP", @"AZ", @"BD", @"BH", @"BN", @"BT",
+                                             @"CC", @"CN", @"CX", @"CY", @"GE", @"HK", @"ID", @"IL", @"IN",
+                                             @"IO", @"IQ", @"IR", @"JO", @"JP", @"KG", @"KH", @"KP", @"KR",
+                                             @"KW", @"KZ", @"LA", @"LB", @"LK", @"MM", @"MN", @"MO", @"MV",
+                                             @"MY", @"NP", @"OM", @"PH", @"PK", @"PS", @"QA", @"SA", @"SG",
+                                             @"SY", @"TH", @"TJ", @"TL", @"TM", @"TW", @"UZ", @"VN", @"YE" ];
+    NSArray *const countriesInAustralia = @[ @"AS", @"AU", @"CK", @"FJ", @"FM", @"GU", @"KI", @"MH", @"MP",
+                                             @"NC", @"NF", @"NR", @"NU", @"NZ", @"PF", @"PG", @"PN", @"PW",
+                                             @"SB", @"TK", @"TO", @"TV", @"UM", @"VU", @"WF", @"WS" ];
+    NSArray *const countriesInEurope    = @[ @"AD", @"AL", @"AT", @"AX", @"BA", @"BE", @"BG", @"BY", @"CH",
+                                             @"CZ", @"DE", @"DK", @"EE", @"ES", @"EU", @"FI", @"FO", @"FR",
+                                             @"FX", @"GB", @"GG", @"GI", @"GR", @"HR", @"HU", @"IE", @"IM",
+                                             @"IS", @"IT", @"JE", @"LI", @"LT", @"LU", @"LV", @"MC", @"MD",
+                                             @"ME", @"MK", @"MT", @"NL", @"NO", @"PL", @"PT", @"RO", @"RS",
+                                             @"RU", @"SE", @"SI", @"SJ", @"SK", @"SM", @"TR", @"UA", @"VA" ];
   
     NSArray *objectsForAfrica      = [self arrayContainingObject:kContinentNameAfrica
                                                 numberOfTimes:[countriesInAfrica count]];
@@ -96,7 +119,8 @@ NSString * const kContinentNameEurope   = @"Europe";
     
     if (!result)
     {
-        result = @[kContinentNameAfrica, kContinentNameAmerica, kContinentNameAsia, kContinentNameAustralia, kContinentNameEurope];
+        result = @[kContinentNameAfrica, kContinentNameAmerica, kContinentNameAsia,
+                   kContinentNameAustralia, kContinentNameEurope];
     }
     
     return result;
