@@ -7,13 +7,18 @@
 //
 
 #import "CLPlacemark+HZContinents.h"
+#import "HZCountryToContinentDecoder.h"
 
 
 @implementation CLPlacemark (HZContinents)
 
 -(NSString *)continent
 {
-    return nil;
+    HZCountryToContinentDecoder *continentDecoder = [[HZCountryToContinentDecoder alloc] init];
+    
+    NSString *result = [continentDecoder continentForCountryCode:self.ISOcountryCode];
+    
+    return result;
 }
 
 @end

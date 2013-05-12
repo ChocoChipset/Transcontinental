@@ -8,6 +8,7 @@
 
 #import <CoreLocation/CoreLocation.h>
 
+
 @interface CLPlacemark (HZContinents)
 
 - (NSString *)continent;
