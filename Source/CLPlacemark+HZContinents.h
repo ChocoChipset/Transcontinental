@@ -10,4 +10,6 @@
 
 @interface CLPlacemark (HZContinents)
 
+- (NSString *)continent;
+
 @end

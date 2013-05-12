@@ -11,5 +11,9 @@
 
 @implementation CLPlacemark (HZContinents)
 
+-(NSString *)continent
+{
+    return nil;
+}
 
 @end
