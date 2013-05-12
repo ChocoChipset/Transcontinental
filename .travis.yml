@@ -1,0 +1,5 @@
+script: ./osx-cibuild.sh TranscontinentalExample TranscontinentalExampleTests
+language: objective-c
+before_script: 
+  - cp -R BuildScript/ TranscontinentalExample/
+  - cd TranscontinentalExample
