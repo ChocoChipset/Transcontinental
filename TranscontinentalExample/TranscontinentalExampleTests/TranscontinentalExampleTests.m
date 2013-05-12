@@ -30,7 +30,7 @@ const NSTimeInterval kTimeoutInterval = 30.0;   // unit: s
 
 - (void)testAsiaPlacemark
 {
-    NSString *testOne = @"Tokyo Tree, Japan";
+    NSString *testOne = @"Tokyo Tree, Tokyo, Japan";
     NSString * const expectedContinentForTestOne = @"Asia";
     __block CLPlacemark *placeMarkOne = nil;
     
