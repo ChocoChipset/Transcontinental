@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface HZCountryToContinentDecoder : NSObject
+
++(NSArray *)allContinents;
+-(NSString *)continentForCountryCode:(NSString *)paramCountryISOCode;
 
 @end
