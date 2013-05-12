@@ -24,6 +24,7 @@
 		3A057F9E173FCE10007274A5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A057F9C173FCE10007274A5 /* InfoPlist.strings */; };
 		3A057FA1173FCE10007274A5 /* TranscontinentalExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A057FA0173FCE10007274A5 /* TranscontinentalExampleTests.m */; };
 		3A057FAB173FCEF9007274A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A057FAA173FCEF9007274A5 /* CoreLocation.framework */; };
+		3A057FB9173FD79A007274A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A057FAA173FCEF9007274A5 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		3A057F9F173FCE10007274A5 /* TranscontinentalExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TranscontinentalExampleTests.h; sourceTree = "<group>"; };
 		3A057FA0173FCE10007274A5 /* TranscontinentalExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TranscontinentalExampleTests.m; sourceTree = "<group>"; };
 		3A057FAA173FCEF9007274A5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3A057FB5173FD068007274A5 /* CLPlacemark+HZContinents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLPlacemark+HZContinents.h"; sourceTree = "<group>"; };
+		3A057FB6173FD068007274A5 /* CLPlacemark+HZContinents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLPlacemark+HZContinents.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A057FB9173FD79A007274A5 /* CoreLocation.framework in Frameworks */,
 				3A057F94173FCE10007274A5 /* SenTestingKit.framework in Frameworks */,
 				3A057F95173FCE10007274A5 /* UIKit.framework in Frameworks */,
 				3A057F96173FCE10007274A5 /* Foundation.framework in Frameworks */,
@@ -121,6 +125,7 @@
 		3A057F75173FCE10007274A5 /* TranscontinentalExample */ = {
 			isa = PBXGroup;
 			children = (
+				3A057FB4173FD068007274A5 /* Source */,
 				3A057F7E173FCE10007274A5 /* HZAppDelegate.h */,
 				3A057F7F173FCE10007274A5 /* HZAppDelegate.m */,
 				3A057F87173FCE10007274A5 /* MainStoryboard.storyboard */,
@@ -162,6 +167,16 @@
 				3A057F9C173FCE10007274A5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A057FB4173FD068007274A5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3A057FB5173FD068007274A5 /* CLPlacemark+HZContinents.h */,
+				3A057FB6173FD068007274A5 /* CLPlacemark+HZContinents.m */,
+			);
+			name = Source;
+			path = ../../Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +293,7 @@
 				3A057F7C173FCE10007274A5 /* main.m in Sources */,
 				3A057F80173FCE10007274A5 /* HZAppDelegate.m in Sources */,
 				3A057F8C173FCE10007274A5 /* HZViewController.m in Sources */,
+				3A057FB7173FD068007274A5 /* CLPlacemark+HZContinents.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A057FA1173FCE10007274A5 /* TranscontinentalExampleTests.m in Sources */,
+				3A057FB8173FD068007274A5 /* CLPlacemark+HZContinents.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
