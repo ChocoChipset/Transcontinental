@@ -9,7 +9,7 @@
 #import "HZCountryToContinentDecoder.h"
 
 
-#pragma mark - Constants
+#pragma mark Constants
 
 NSString * const kContinentNameAfrica   = @"Africa";
 NSString * const kContinentNameAmerica  = @"America";
@@ -17,7 +17,15 @@ NSString * const kContinentNameAsia   = @"Asia";
 NSString * const kContinentNameAustralia  = @"Australia";
 NSString * const kContinentNameEurope   = @"Europe";
 
-#pragma mark -
+
+#pragma mark - NSArray+RepeatingObjects Header
+
+@interface NSArray (RepeatingObjects)
++(NSArray *)arrayContainingObject:(NSString *)paramKey numberOfTimes:(NSUInteger)paramNumberOfTimes;
+@end
+
+
+#pragma mark - Decoder Implementation
 
 @implementation HZCountryToContinentDecoder
 
@@ -58,16 +66,16 @@ NSString * const kContinentNameEurope   = @"Europe";
                                              @"ME", @"MK", @"MT", @"NL", @"NO", @"PL", @"PT", @"RO", @"RS",
                                              @"RU", @"SE", @"SI", @"SJ", @"SK", @"SM", @"TR", @"UA", @"VA" ];
   
-    NSArray *objectsForAfrica      = [self arrayContainingObject:kContinentNameAfrica
-                                                numberOfTimes:[countriesInAfrica count]];
-    NSArray *objectsForAmerica     = [self arrayContainingObject:kContinentNameAmerica
-                                                numberOfTimes:[countriesInAmerica count]];
-    NSArray *objectsForAsia        = [self arrayContainingObject:kContinentNameAsia
-                                                numberOfTimes:[countriesInAsia count]];
-    NSArray *objectsForAustralia   = [self arrayContainingObject:kContinentNameAustralia
-                                                numberOfTimes:[countriesInAustralia count]];
-    NSArray *objectsForEurope      = [self arrayContainingObject:kContinentNameEurope
-                                                numberOfTimes:[countriesInEurope count]];
+    NSArray *objectsForAfrica      = [NSArray arrayContainingObject:kContinentNameAfrica
+                                                      numberOfTimes:[countriesInAfrica count]];
+    NSArray *objectsForAmerica     = [NSArray arrayContainingObject:kContinentNameAmerica
+                                                      numberOfTimes:[countriesInAmerica count]];
+    NSArray *objectsForAsia        = [NSArray arrayContainingObject:kContinentNameAsia
+                                                      numberOfTimes:[countriesInAsia count]];
+    NSArray *objectsForAustralia   = [NSArray arrayContainingObject:kContinentNameAustralia
+                                                      numberOfTimes:[countriesInAustralia count]];
+    NSArray *objectsForEurope      = [NSArray arrayContainingObject:kContinentNameEurope
+                                                      numberOfTimes:[countriesInEurope count]];
     
     NSDictionary *dictionaryForAfrica       = [NSDictionary dictionaryWithObjects:objectsForAfrica
                                                                           forKeys:countriesInAfrica];
@@ -87,26 +95,9 @@ NSString * const kContinentNameEurope   = @"Europe";
     [countryCodeToContinentMap setValuesForKeysWithDictionary:dictionaryForAustralia];
     [countryCodeToContinentMap setValuesForKeysWithDictionary:dictionaryForEurope];
     
-    NSString *result = [countryCodeToContinentMap objectForKey:paramCountryISOCode];
+    NSString *result = [countryCodeToContinentMap objectForKey:paramCountryISOCode];    // mapping
     
     return result;
-}
-
--(NSArray *)arrayContainingObject:(NSString *)paramKey numberOfTimes:(NSUInteger)paramNumberOfTimes
-{
-    if (paramKey == nil)
-    {
-        return nil;
-    }
-    
-    NSMutableArray *keysMutableArray = [NSMutableArray array];
-    
-    for (NSUInteger indexArraySize = 0; indexArraySize < paramNumberOfTimes; ++indexArraySize)
-    {
-        [keysMutableArray addObject:paramKey];
-    }
-    
-    return [NSArray arrayWithArray:keysMutableArray];
 }
 
 
@@ -126,6 +117,30 @@ NSString * const kContinentNameEurope   = @"Europe";
     return result;
 }
 
+@end
 
+
+#pragma mark - NSArray+RepeatingObjects Implementation
+
+/* Maintaing NSArray category in this .m file to facilitate import of Source into other projects. */
+
+@implementation NSArray (RepeatingObjects)
+
++(NSArray *)arrayContainingObject:(NSString *)paramKey numberOfTimes:(NSUInteger)paramNumberOfTimes
+{
+    if (paramKey == nil)
+    {
+        return nil;
+    }
+    
+    NSMutableArray *keysMutableArray = [NSMutableArray array];
+    
+    for (NSUInteger indexArraySize = 0; indexArraySize < paramNumberOfTimes; ++indexArraySize)
+    {
+        [keysMutableArray addObject:paramKey];
+    }
+    
+    return [NSArray arrayWithArray:keysMutableArray];
+}
 
 @end
