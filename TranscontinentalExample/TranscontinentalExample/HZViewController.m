@@ -28,4 +28,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - MapView Delegates
+
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    #warning Continent Mapping to be implemented
+    
+    self.userCoordinateLabel.text = [NSString stringWithFormat:@"%g, %g", userLocation.coordinate.latitude, userLocation.coordinate.longitude];
+}
+
+
+-(void)mapView:(MKMapView *)mapView didFailToLocateUserWithError:(NSError *)error
+{
+    UIAlertView *userLocationErrorAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                         message:@"Your location couldn't be determined"
+                                                                        delegate:nil
+                                                               cancelButtonTitle:@"OK"
+                                                               otherButtonTitles: nil];
+    
+    [userLocationErrorAlertView show];
+}
+
 @end
