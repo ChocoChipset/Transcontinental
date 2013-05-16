@@ -41,7 +41,6 @@
     [super viewDidLoad];
 
     self.mapView.delegate = self;
-    self.mapView.userTrackingMode = MKUserTrackingModeNone;
 }
 
 #pragma mark - Errors
@@ -65,7 +64,7 @@
 {
     self.userCoordinateLabel.text = [NSString stringWithFormat:@"%g, %g", userLocation.coordinate.latitude, userLocation.coordinate.longitude];
     
-    #warning Execute Geocoder call only once!!
+    [self.mapView setCenterCoordinate:userLocation.coordinate animated:YES];
     
     static BOOL geocoderInProgressLock = NO;    // there is surely a better way to implement this lock. :Pr
     
