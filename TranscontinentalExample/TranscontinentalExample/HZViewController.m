@@ -89,13 +89,13 @@
                  }
                  
                  self.userContinentLabel.text = continentNameForPlacemark;
-                 
-                 geocoderInProgressLock = NO;
              }
              else
              {
                  [self displayLocationError];
              }
+             
+             geocoderInProgressLock = NO;
          }];
     }
     
