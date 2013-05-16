@@ -67,28 +67,37 @@
     
     #warning Execute Geocoder call only once!!
     
-    [self.geocoder reverseGeocodeLocation:userLocation.location
-                        completionHandler:
-     ^(NSArray *placemarks, NSError *error) {
-         
-         if (error == nil)
-         {
-             NSString *continentNameForPlacemark = @"Nowhere";  // No placemarks! Nothing! Nowhere is where you live!
+    static BOOL geocoderInProgressLock = NO;    // there is surely a better way to implement this lock. :Pr
+    
+    if (!geocoderInProgressLock)
+    {
+        geocoderInProgressLock = YES;
+        
+        [self.geocoder reverseGeocodeLocation:userLocation.location
+                            completionHandler:
+         ^(NSArray *placemarks, NSError *error) {
              
-             if ([placemarks count] > 0)
+             if (error == nil)
              {
-                 CLPlacemark *anyPlacemark = [placemarks lastObject];
+                 NSString *continentNameForPlacemark = @"Nowhere";  // No placemarks! Nothing! Nowhere is where you live.
                  
-                 continentNameForPlacemark = [anyPlacemark continent];
+                 if ([placemarks count] > 0)
+                 {
+                     CLPlacemark *anyPlacemark = [placemarks lastObject];
+                     
+                     continentNameForPlacemark = [anyPlacemark continent];
+                 }
+                 
+                 self.userContinentLabel.text = continentNameForPlacemark;
+                 
+                 geocoderInProgressLock = NO;
              }
-             
-             self.userContinentLabel.text = continentNameForPlacemark;
-         }
-         else
-         {
-             [self displayLocationError];
-         }
-     }];
+             else
+             {
+                 [self displayLocationError];
+             }
+         }];
+    }
     
 }
 
