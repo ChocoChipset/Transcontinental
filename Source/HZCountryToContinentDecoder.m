@@ -95,7 +95,7 @@ NSString * const kContinentNameEurope   = @"Europe";
     [countryCodeToContinentMap setValuesForKeysWithDictionary:dictionaryForAustralia];
     [countryCodeToContinentMap setValuesForKeysWithDictionary:dictionaryForEurope];
     
-    NSString *result = [countryCodeToContinentMap objectForKey:paramCountryISOCode];    // mapping
+    NSString *result = [countryCodeToContinentMap objectForKey:[paramCountryISOCode uppercaseString]];    // mapping
     
     return result;
 }
